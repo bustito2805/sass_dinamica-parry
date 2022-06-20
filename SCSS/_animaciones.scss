@@ -1,0 +1,41 @@
+/*TRANSICIONES*/
+.transicion{
+    transition: width 3s;
+ }
+ 
+.transicion:hover {
+    width: 100%;
+       }
+/*--PSEUDO CLASES*/
+/*selector:pseudoclase { propiedad: valor; } */
+
+a:hover{ font-weight:bold;
+    background-color:rgb(47, 47, 240);
+    color:white;
+    text-decoration:underline; }
+
+a:link{  text-decoration:none;
+    color:rgb(153, 35, 35); }
+
+a:visited{ color:#113b0c; }
+
+a:active{ background-color:rgb(153, 153, 13); 
+     color:black; }
+
+/*ANIMACIONES*/
+
+.tituloAnimado {
+animation-name: titulo;
+animation-duration: 8s;
+animation-iteration-count: 3;
+}
+
+@keyframes titulo {
+/*inicio*/from {
+      transform:translateX(1300px)
+}
+
+/*FINAL*/ to {
+       transform: translate(0);
+}
+}
