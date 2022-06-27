@@ -2,65 +2,26 @@
 
 /*Desktop*/
 
-/*VARIABLES SCSS*/
-
-
-
 @media (min-width: 1024px){
 
-    $fondoazul : rgb(79, 111, 218);
-    body{
-    background-color : $fondoazul;
-}
-    
-    body{
-     
-        background-color: $fondoazul;
-        background-image: radial-gradient(315deg, #813867 0%, #ebebeb 74%);
-        }
-        P  { font-size:large ;
+    P  { font-size:large ;
         }     
        }
    
 
 /*Tablet */
 
-/*VARIABLES SCSS*/
-
-
 @media (min-width: 481px) and (max-width:1023px){ 
 
-    $fondovioleta : rgb(173, 72, 212);
-    body{
-        background-color : $fondovioleta;
-    }
-
-    body{
-
-        background-color: $fondovioleta;
-        background-image: radial-gradient(#7e3d4a 0%, #db6885 74%);
-        }
-        P  { font-size:medium ;
+    P  { font-size:medium ;
         }     
 }
 
 
 /*Smartphone */
 
-/*VARIABLES SCSS*/
-
-
-
 @media (max-width: 480px){
 
-    $fondoverde : rgb(52, 228, 90);
-body{
-    background-color : $fondoverde;
-}
-    body{
-
-        background-color: $fondoverde;
-                }
-        P  { font-size:small ;
+    P  { font-size:small ;
         }     
 }

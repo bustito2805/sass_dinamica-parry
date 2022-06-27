@@ -7,6 +7,8 @@ body{
         flex-flow: nowrap;
         justify-content: start;
         align-items:center;
+        overflow: hidden;   
+        img { width: 200px; }
     }
     .asideFlex h2{
         display: flex;

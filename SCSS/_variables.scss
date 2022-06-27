@@ -1,0 +1,107 @@
+
+
+$anchura: 100%;
+$estilofuente: 'Akshar', sans-serif;
+$textosize: 50px;
+
+body{
+    width: $anchura;
+    header {width: $anchura;
+        h1{font-style:$estilofuente;
+           font-size: $textosize;
+             }
+        }
+    nav {width: $anchura;
+        div{width: $anchura;}
+    }
+    div {width: $anchura;
+        div{width: $anchura + 10;}
+        }
+    aside {width: $anchura - 20;}
+    footer {width: $anchura - 30;}
+}
+//EXTEND//
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+}
+
+.card-verde {
+  @extend .card;
+  background-color: aquamarine;
+
+}
+
+//MIXINS//
+@mixin cajas ($color-texto, $tamano-fuente, $estilo-fuente,$orientacion) {
+ color:$color-texto ;
+ font-size: $tamano-fuente;
+ font-style: $estilo-fuente;
+ justify-content: $orientacion;
+  
+}
+.caja-index{
+  @include cajas(red, small, italic, stretch)
+}
+
+.caja-blog{
+  @include cajas(blue,large,italic,stretch)
+}
+
+//MAPAS--//
+$colortitulos: (
+ //clave : valor
+h1: rgb(156, 32, 32),
+h2: rgb(3, 3, 3),
+h3: rgb(7, 33, 150)
+
+);
+
+//EACH con MAPAS//
+@each $titulo, $valor in $colortitulos {
+  #{$titulo} {color: $valor;}
+} 
+// aplique color directamente en las etiquetas h(titulos). De acuerdo a gerarquia del titulos es el color//
+
+
+/*VARIABLES RESPNSIVE SCSS*/
+
+@media (min-width: 1024px) {
+    body {
+      background-color: rgb(79, 111, 218);
+    }
+    body {
+      background-color: rgb(79, 111, 218);
+      background-image: radial-gradient(315deg, #813867 0%, #ebebeb 74%);
+    }
+    
+  }
+  /*Tablet */
+    @media (min-width: 481px) and (max-width: 1023px) {
+    body {
+      background-color: rgb(173, 72, 212);
+    }
+    body {
+      background-color: rgb(173, 72, 212);
+      background-image: radial-gradient(#7e3d4a 0%, #db6885 74%);
+    }
+    
+  }
+  /*Smartphone */
+    @media (max-width: 480px) {
+    body {
+      background-color: rgb(52, 228, 90);
+    }
+    body {
+      background-color: rgb(52, 228, 90);
+    }
+   
+  }
+  

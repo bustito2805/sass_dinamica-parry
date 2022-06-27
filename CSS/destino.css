@@ -14,6 +14,10 @@ body .headerFlex {
   flex-flow: nowrap;
   justify-content: start;
   align-items: center;
+  overflow: hidden;
+}
+body .headerFlex img {
+  width: 200px;
 }
 body .asideFlex h2 {
   display: flex;
@@ -43,7 +47,7 @@ h2 {
   font-size: larger;
 }
 h2 h3 {
-  margin: 6px;
+  margin: 7px;
 }
 
 textarea {
@@ -107,7 +111,95 @@ a:active {
 }
 /*RESPONSIVE DESINGN*/
 /*Desktop*/
-/*VARIABLES SCSS*/
+@media (min-width: 1024px) {
+  P {
+    font-size: large;
+  }
+}
+/*Tablet */
+@media (min-width: 481px) and (max-width: 1023px) {
+  P {
+    font-size: medium;
+  }
+}
+/*Smartphone */
+@media (max-width: 480px) {
+  P {
+    font-size: small;
+  }
+}
+body {
+  width: 100%;
+}
+body header {
+  width: 100%;
+}
+body header h1 {
+  font-style: "Akshar", sans-serif;
+  font-size: 50px;
+}
+body nav {
+  width: 100%;
+}
+body nav div {
+  width: 100%;
+}
+body div {
+  width: 100%;
+}
+body div div {
+  width: 110%;
+}
+body aside {
+  width: 80%;
+}
+body footer {
+  width: 70%;
+}
+
+.card, .card-verde {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+}
+
+.card-verde {
+  background-color: aquamarine;
+}
+
+.caja-index {
+  color: red;
+  font-size: small;
+  font-style: italic;
+  justify-content: stretch;
+}
+
+.caja-blog {
+  color: blue;
+  font-size: large;
+  font-style: italic;
+  justify-content: stretch;
+}
+
+h1 {
+  color: rgb(156, 32, 32);
+}
+
+h2 {
+  color: rgb(3, 3, 3);
+}
+
+h3 {
+  color: rgb(7, 33, 150);
+}
+
+/*VARIABLES RESPNSIVE SCSS*/
 @media (min-width: 1024px) {
   body {
     background-color: rgb(79, 111, 218);
@@ -116,12 +208,8 @@ a:active {
     background-color: rgb(79, 111, 218);
     background-image: radial-gradient(315deg, #813867 0%, #ebebeb 74%);
   }
-  P {
-    font-size: large;
-  }
 }
 /*Tablet */
-/*VARIABLES SCSS*/
 @media (min-width: 481px) and (max-width: 1023px) {
   body {
     background-color: rgb(173, 72, 212);
@@ -130,21 +218,14 @@ a:active {
     background-color: rgb(173, 72, 212);
     background-image: radial-gradient(#7e3d4a 0%, #db6885 74%);
   }
-  P {
-    font-size: medium;
-  }
 }
 /*Smartphone */
-/*VARIABLES SCSS*/
 @media (max-width: 480px) {
   body {
     background-color: rgb(52, 228, 90);
   }
   body {
     background-color: rgb(52, 228, 90);
-  }
-  P {
-    font-size: small;
   }
 }
 
